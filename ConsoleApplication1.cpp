@@ -5,6 +5,16 @@
 
 using namespace std;
 
+void whileMethod(int xx) {
+    int nm = 0;
+    int x = xx;
+    while (nm < 5) {
+        cout << "xx value is :" << x << endl;
+        x++;
+        nm++;
+    }
+}
+
 int main()
 {
     cout << "Hello World!\n";
@@ -14,8 +24,33 @@ int main()
     cin >> radius;
     cout << "your input value : " << radius << endl;
 
+    //类型转换
+    int z = 2;
+    //三者等价
+    double x = (double)z;
+    double y = double(z);
+    double a = static_cast<double>(z);
+    
+
+    cout << "the size of int is : \t\t" << sizeof(int) << "byte\n";
+
+    int xx = 10;
+    int yy = 20;
+    if (xx < 20) cout << "xx is smaller " << endl;
+
+    switch (xx)
+    {
+    case 10:
+        cout << "xx value is :" << xx << endl;
+        break;
+    default:
+        break;
+    }
+
+    whileMethod(xx);
 
 }
+
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
